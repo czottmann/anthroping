@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>(Unofficial) Apple Developer System Status Feeds</title>
+    <script defer data-domain="zottmann.dev" src="https://p.zottmann.dev/js/script.outbound-links.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <link rel="stylesheet" href="pico.classless.min.css" />
+    <style>
+      header {
+        margin-top: var(--pico-block-spacing-vertical);
+      }
+
+      iframe {
+        width: 20rem;
+        height: 30rem;
+      }
+
+      .iframe-caption {
+        font-size: 75%;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+
+      aside {
+        margin-top: var(--pico-block-spacing-vertical);
+        margin-bottom: var(--pico-block-spacing-vertical);
+        padding: var(--pico-block-spacing-vertical)
+          var(--pico-block-spacing-horizontal);
+        border-radius: var(--pico-border-radius);
+        background: var(--pico-card-background-color);
+        box-shadow: var(--pico-card-box-shadow);
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 4rem;
+      }
+
+      @media (max-width: 1024px) {
+        .container {
+          display: block;
+        }
+      }
+    </style>
+    <meta
+      property="og:title"
+      content="(Unofficial) Apple Developer System Status Feeds"
+    />
+    <meta
+      property="og:description"
+      content="Mastodon, Bluesky, and RSS feeds containing Apple's developer system status updates as they happen."
+    />
+    <meta property="og:url" content="https://zottmann.dev/adss/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en" />
+    <meta
+      property="og:site_name"
+      content="(Unofficial) Apple Developer System Status Feeds"
+    />
+    <link href="favicon.png" rel="apple-touch-icon" />
+    <link href="favicon.png" rel="icon" type="image/png" />
+    <link
+      href="https://techhub.social/@AppleDeveloperSystemStatus.rss"
+      rel="alternate"
+      title="Unofficial Apple Status RSS feed"
+      type="application/rss+xml"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>(Unofficial) Apple Developer System Status Feeds</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <section>
+          <p>
+            <a href="https://apple.com">Apple</a> publishes two status pages for
+            their various systems:
+          </p>
+
+          <ul>
+            <li>
+              <a href="https://www.apple.com/support/systemstatus/"
+                >System Status</a
+              >
+              show the statuses of most user-facing Apple services and stores.
+            </li>
+            <li>
+              <a href="https://developer.apple.com/system-status/"
+                >Developer System Status</a
+              >
+              displays developer-facing services.
+            </li>
+          </ul>
+
+          <p>
+            Useful, but as a iOS/macOS developer I like my status updates both
+            as RSS feeds and with a bit more urgency. So I've set up accounts on
+            "my" social networks, and a feeds to relay the status updates as
+            they happen.
+            <strong
+              >The status pages are checked for updates every 2 minutes.</strong
+            >
+          </p>
+
+          <ul>
+            <li>
+              Mastodon:
+              <a
+                href="https://techhub.social/@AppleDeveloperSystemStatus"
+                rel="me"
+                >@AppleDeveloperSystemStatus@techhub.social</a
+              >
+            </li>
+            <li>
+              Bluesky:
+              <a href="https://bsky.app/profile/adss.zottmann.dev" rel="me"
+                >@adss.zottmann.dev</a
+              >
+            </li>
+            <li>
+              RSS feed:
+              <a href="https://techhub.social/@AppleDeveloperSystemStatus.rss"
+                >RSS</a
+              >
+            </li>
+          </ul>
+
+          <p></p>
+
+          <p>
+            FYI: If you want to work with the raw data yourself, Apple publishes
+            the updates as JSON and JSONP, respectively, at the following URLs:
+          </p>
+
+          <ul>
+            <li>
+              <a
+                href="https://www.apple.com/support/systemstatus/data/system_status_en_US.js"
+                >System Status (JSON)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.apple.com/support/systemstatus/data/developer/system_status_en_US.js"
+                >Developer System Status (JSONP)</a
+              >
+            </li>
+          </ul>
+
+          <p>
+            That's it. Have fun. I hope this is as useful to someone else as it
+            is to me. 😉
+          </p>
+        </section>
+
+        <article>
+          <h4>Recent Status updates</h4>
+          <iframe
+            sandbox
+            src="https://fedifeed.com/api/v1/feed?user=AppleDeveloperSystemStatus&instance=https%3A%2F%2Ftechhub.social&instance_type=&theme=auto-auto&size=80&header=false&replies=false&boosts=false"
+          ></iframe>
+
+          <p class="iframe-caption">
+            ↑ Preview of the
+            <a href="https://techhub.social/@AppleDeveloperSystemStatus"
+              >Mastodon feed</a
+            >
+            ↑
+          </p>
+        </article>
+      </div>
+
+      <aside>
+        If you like those feeds, maybe
+        <a href="https://actions.work/?ref=adss"
+          >check out my macOS & iOS apps</a
+        >! I make Shortcuts-related productivity tools like
+        <a href="https://actions.work/actions-for-obsidian?ref=adss" rel="me"
+          >Actions For Obsidian</a
+        >
+        and
+        <a href="https://actions.work/browser-actions?ref=adss" rel="me"
+          >Browser Actions</a
+        >.
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        This website is a side-project by
+        <a href="https://zottmann.dev" rel="me">Carlo Zottmann</a> of
+        <a href="https://actions.work?ref=adss" rel="me">ActionsDotWork</a>.
+        <a href="https://actions.work/impressum?ref=adss">Impressum.</a> All
+        Apple outages, incidents, and related status data &copy;
+        <a href="https://apple.com">Apple Inc.</a> This site is not affiliated
+        with or endorsed by Apple.
+      </p>
+    </footer>
+  </body>
+</html>
