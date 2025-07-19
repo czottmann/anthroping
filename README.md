@@ -1,5 +1,5 @@
-# (Unofficial) Apple Developer System Status Feeds
+# (Unofficial) Anthropic Status on Bluesky & Mastodon
 
-I've set up automated social network accounts on Mastodon and Bluesky, as well as an RSS feed, to relay service updates from Apple's System Status and Developer System Status pages as they happen.
+I've set up automated social network accounts on Mastodon and Bluesky, to relay service updates from Anthropic's Status page as they happen.
 
-Please visit [zottmann.dev/adss/](https://zottmann.dev/adss/) for links and more information.
+Please visit [zottmann.dev/anthroping/](https://zottmann.dev/anthroping/) for links and more information.

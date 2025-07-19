@@ -4,25 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <title>(Unofficial) Apple Developer System Status Feeds</title>
+    <title>(Unofficial) Anthropic Status on Bluesky &amp; Mastodon</title>
     <script defer data-domain="zottmann.dev" src="https://p.zottmann.dev/js/script.outbound-links.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     <link rel="stylesheet" href="pico.classless.min.css" />
     <style>
       header {
         margin-top: var(--pico-block-spacing-vertical);
-      }
-
-      iframe {
-        width: 20rem;
-        height: 30rem;
-      }
-
-      .iframe-caption {
-        font-size: 75%;
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 0;
       }
 
       aside {
@@ -38,122 +26,62 @@
       footer {
         font-size: 0.8rem;
       }
-
-      .container {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-gap: 4rem;
-      }
-
-      @media (max-width: 1024px) {
-        .container {
-          display: block;
-        }
-      }
     </style>
     <meta
       property="og:title"
-      content="(Unofficial) Apple Developer System Status Feeds"
+      content="(Unofficial) Anthropic Status on Bluesky &amp; Mastodon"
     />
     <meta
       property="og:description"
-      content="Mastodon, Bluesky, and RSS feeds containing Apple's developer system status updates as they happen."
+      content="Mastodon and Bluesky accounts containing Anthropic's Status updates as they happen."
     />
-    <meta property="og:url" content="https://zottmann.dev/adss/" />
+    <meta property="og:url" content="https://zottmann.dev/anthroping/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en" />
     <meta
       property="og:site_name"
-      content="(Unofficial) Apple Developer System Status Feeds"
+      content="(Unofficial) Anthropic Status on Bluesky &amp; Mastodon"
     />
     <link href="favicon.png" rel="apple-touch-icon" />
     <link href="favicon.png" rel="icon" type="image/png" />
-    <link
-      href="https://techhub.social/@AppleDeveloperSystemStatus.rss"
-      rel="alternate"
-      title="Unofficial Apple Status RSS feed"
-      type="application/rss+xml"
-    />
   </head>
   <body>
     <header>
-      <h1>(Unofficial) Apple Developer System Status Feeds</h1>
+      <h1>(Unofficial) Anthropic Status on Bluesky &amp; Mastodon</h1>
     </header>
 
     <main>
       <div class="container">
         <section>
           <p>
-            <a href="https://apple.com">Apple</a> publishes two status pages for
-            their various systems:
+            <a href="https://status.anthropic.com">Anthropic Status</a> publishes the current health
+            of their various systems.
           </p>
-
-          <ul>
-            <li>
-              <a href="https://www.apple.com/support/systemstatus/"
-                >System Status</a
-              >
-              show the statuses of most user-facing Apple services and stores.
-            </li>
-            <li>
-              <a href="https://developer.apple.com/system-status/"
-                >Developer System Status</a
-              >
-              displays developer-facing services.
-            </li>
-          </ul>
 
           <p>
-            Useful, but as a iOS/macOS developer I like my status updates both
-            as RSS feeds and with a bit more urgency. So I've set up accounts on
-            "my" social networks, and a feeds to relay the status updates as
-            they happen.
-            <strong
-              >The status pages are checked for updates every 2 minutes.</strong
-            >
+            Useful, and you can get these updates via mail, text message, Slack message, webhooks,
+            and RSS/Atom feeds. Notably absent: Accounts on "my" social networks, i.e.
+            <a href="https://bsky.app/profile/zottmann.dev" rel="me">Bluesky</a> and
+            <a href="https://norden.social/@czottmann" rel="me">Mastodon</a>.
           </p>
 
+          <p>
+            <b>So I made those accounts below.</b> They're fed by the official webhook, so new messages go
+            out as soon as updates happen.
+          </p>
           <ul>
             <li>
               Mastodon:
               <a
-                href="https://techhub.social/@AppleDeveloperSystemStatus"
+                href="https://mastodon.social/@AnthroPing"
                 rel="me"
-                >@AppleDeveloperSystemStatus@techhub.social</a
+                >@AnthroPing@mastodon.social</a
               >
             </li>
             <li>
               Bluesky:
-              <a href="https://bsky.app/profile/adss.zottmann.dev" rel="me"
-                >@adss.zottmann.dev</a
-              >
-            </li>
-            <li>
-              RSS feed:
-              <a href="https://techhub.social/@AppleDeveloperSystemStatus.rss"
-                >RSS</a
-              >
-            </li>
-          </ul>
-
-          <p></p>
-
-          <p>
-            FYI: If you want to work with the raw data yourself, Apple publishes
-            the updates as JSON and JSONP, respectively, at the following URLs:
-          </p>
-
-          <ul>
-            <li>
-              <a
-                href="https://www.apple.com/support/systemstatus/data/system_status_en_US.js"
-                >System Status (JSON)</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.apple.com/support/systemstatus/data/developer/system_status_en_US.js"
-                >Developer System Status (JSONP)</a
+              <a href="https://bsky.app/profile/anthroping.zottmann.dev" rel="me"
+                >@AnthroPing.zottmann.dev</a
               >
             </li>
           </ul>
@@ -163,36 +91,22 @@
             is to me. 😉
           </p>
         </section>
-
-        <article>
-          <h4>Recent Status updates</h4>
-          <iframe
-            sandbox
-            src="https://fedifeed.com/api/v1/feed?user=AppleDeveloperSystemStatus&instance=https%3A%2F%2Ftechhub.social&instance_type=&theme=auto-auto&size=80&header=false&replies=false&boosts=false"
-          ></iframe>
-
-          <p class="iframe-caption">
-            ↑ Preview of the
-            <a href="https://techhub.social/@AppleDeveloperSystemStatus"
-              >Mastodon feed</a
-            >
-            ↑
-          </p>
-        </article>
       </div>
 
       <aside>
         If you like those feeds, maybe
-        <a href="https://actions.work/?ref=adss"
+        <a href="https://actions.work/?ref=anthroping"
           >check out my macOS & iOS apps</a
         >! I make Shortcuts-related productivity tools like
-        <a href="https://actions.work/actions-for-obsidian?ref=adss" rel="me"
+        <a href="https://actions.work/actions-for-obsidian?ref=anthroping" rel="me"
           >Actions For Obsidian</a
-        >
-        and
-        <a href="https://actions.work/browser-actions?ref=adss" rel="me"
+        >,
+        <a href="https://actions.work/browser-actions?ref=anthroping" rel="me"
           >Browser Actions</a
-        >.
+        > (which adds Shortcuts support for several major browsers), and
+        <a href="https://actions.work/barcuts?ref=anthroping" rel="me"
+          >BarCuts</a
+        > (a surprisingly useful contextual Shortcuts launcher).
       </aside>
     </main>
 
@@ -200,8 +114,8 @@
       <p>
         This website is a side-project by
         <a href="https://zottmann.dev" rel="me">Carlo Zottmann</a> of
-        <a href="https://actions.work?ref=adss" rel="me">ActionsDotWork</a>.
-        <a href="https://actions.work/impressum?ref=adss">Impressum.</a> All
+        <a href="https://actions.work?ref=anthroping" rel="me">ActionsDotWork</a>.
+        <a href="https://actions.work/impressum?ref=anthroping">Impressum.</a> All
         Apple outages, incidents, and related status data &copy;
         <a href="https://apple.com">Apple Inc.</a> This site is not affiliated
         with or endorsed by Apple.
